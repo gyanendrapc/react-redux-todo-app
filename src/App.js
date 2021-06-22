@@ -17,7 +17,6 @@ const todoList = [
 ];
 
 function App() {
-
   return (
     <div className="App">
       <h2>My Todo</h2>
@@ -29,15 +28,6 @@ function App() {
             <TodoItem name={item.item} done={item.done} id={item.id} />;
           })}
         </div>
-        <div>
-          {
-          
-          for(let i =0; i< todoList.length;i++){
-            <TodoItem name={todoList[i].name done=todoList[i].done id=todoList[i].id}  />;
-            }
-          
-          }
-          </div>
         <Input />
       </div>
     </div>
