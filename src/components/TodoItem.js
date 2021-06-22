@@ -1,15 +1,27 @@
-export default function TodoItem(name, done, id) {
-  const handleClick = () => {};
+import { Checkbox } from "@material-ui/core";
+import React from "react";
+import { useDispatch } from "react-redux";
+import { setCheck } from "../features/todoSlice";
+
+function TodoItem({ name, done, id }) {
+  const dispatch = useDispatch();
+  const handleCheck = () => {
+    dispatch(setCheck(id));
+  };
+
   return (
-    <div className="todo_item">
-      Hello world
-      <checkbox
+    <div className="todoItem">
+      {/* checkbox */}
+      {/* name */}
+      <Checkbox
         checked={done}
-        color="priamry"
-        // onChange={handleCheck}
-        inputProps={{ "arial-label": "secondary checkboxx" }}
+        color="primary"
+        onChange={handleCheck}
+        inputProps={{ "arial-label": "secondary checkbox" }}
       />
-      {console.log("hello")}
+      <p className={done && "todoItem--done"}>{name}</p>
     </div>
   );
 }
+
+export default TodoItem;

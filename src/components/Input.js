@@ -1,16 +1,13 @@
-import React, { useState } from "react";
-// import "./Input.css";
-
+import React from "react";
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { saveTodo } from "../features/todoSlice";
 
-export default function Input() {
+function Input() {
   const [input, setInput] = useState("");
   const dispatch = useDispatch();
-
   const addTodo = () => {
-    console.warn(`Adding ${input}`);
-
+    console.log(`Adding ${input}`);
     dispatch(
       saveTodo({
         item: input,
@@ -25,8 +22,10 @@ export default function Input() {
         type="text"
         value={input}
         onChange={(e) => setInput(e.target.value)}
-      />
-      <button onClick={addTodo}>Add</button>
+      ></input>
+      <button onClick={addTodo}>okay</button>
     </div>
   );
 }
+
+export default Input;

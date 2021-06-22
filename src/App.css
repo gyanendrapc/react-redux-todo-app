@@ -7,13 +7,13 @@
 }
 .input {
   height: 50px;
-  width: 100%;
+  width: 40vw;
   background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 12px;
-  margin-bottom: 0;
+  margin-bottom: 20px;
   padding-bottom: 0;
 }
 input {
@@ -34,14 +34,34 @@ button {
   width: 50px;
   cursor: pointer;
 }
-.app__container{
-  height: 150px;
-  width: 500px;
+.app__container {
+  height: 80vh;
+  width: 50vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(232, 234,237);
+  background-color: rgb(232, 234, 237);
   border-radius: 12px;
   padding: 32px 0px 0px 0px;
   justify-content: flex-end;
+}
+.app__todoContainer {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.todoItem {
+  display: flex;
+  align-items: center;
+  width: 40vw;
+  background-color: white;
+  margin: 6px 4px;
+}
+.todoItem > p {
+  flex: 1;
+}
+.todoItem--done {
+  text-decoration: line-through;
 }
